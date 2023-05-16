@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,600&display=swap');
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 375px;
+    max-width: 1440;
+    margin: auto;
+}
+
+body {
+    color: var(--Very-Dark-Blue);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    margin: 0.5rem 0em;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+header h1 {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+header span {
+    font-weight: 600;
+}
+
+header p {
+    padding: 1.5rem 0;
+}
+
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    /*border: 1px solid goldenrod;*/
+
+}
+
+.card {
+    box-shadow: 2px 5px 10px hsla(229, 6%, 66%, 0.5);
+    padding: 1rem;
+    text-align: start;
+
+}
+
+.card img {
+    padding: 2rem;
+    position: relative;
+    float: right;
+}
+
+.card h2 {
+    padding-bottom: 0.5rem;
+}
+
+.card-1 {
+    border-style: groove hidden hidden;
+    border-color: var(--Cyan);
+    border-radius: 0.5rem;
+
+}
+
+.card-2 {
+    border-style: groove hidden hidden;
+    border-color: var(--Red);
+    border-radius: 0.5rem;
+
+}
+
+.card-3 {
+    border-style: groove hidden hidden;
+    border-color: var(--Orange);
+    border-radius: 0.5rem;
+
+}
+
+.card-4 {
+    border-style: groove hidden hidden;
+    border-color: var(--Blue);
+    border-radius: 0.5rem;
+
+}
+
+.attribution {
+    margin: 2rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr;
+
+
+    }
+
+}
+
+@media (min-width: 995px) and (max-width:2560px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+
+
+
+    }
+
+    .card-1 {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        align-self: center;
+        /*! important - item position*/
+
+    }
+
+    .card-2 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .card-3 {
+        grid-row: 2 / 3;
+        grid-column: 2;
+    }
+
+    .card-4 {
+        grid-row: 1 / 3;
+        grid-column: 3;
+        align-self: center;
+        /*! important - item position*/
+    }
+}
+
+@media (min-width: 768px) and (max-width:995px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+
+    }
+
+    .card {
+        flex: auto;
+        width: 30vh;
+    }
+
+
+}
