@@ -72,13 +72,20 @@ header p {
     box-shadow: 2px 5px 10px hsla(229, 6%, 66%, 0.5);
     padding: 1rem;
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    max-width: 23rem;
+
+}
+
+.card p {
+    padding-bottom: 2rem;
 
 }
 
 .card img {
-    padding: 2rem;
-    position: relative;
-    float: right;
+    width: 4rem;
+    align-self: flex-end;
 }
 
 .card h2 {
